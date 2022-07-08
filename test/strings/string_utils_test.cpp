@@ -38,7 +38,7 @@ TEST(StringUtilsTest, IsUpper) {
 TEST(StringUtilsTest, IsNotUpper) {
   using namespace rishabhdeep::competitive;
   ASSERT_FALSE(StringUtils::is_upper('a'));
-  ASSERT_FALSE(StringUtils::is_upper('R'));
+  ASSERT_FALSE(StringUtils::is_upper('r'));
   ASSERT_FALSE(StringUtils::is_upper('z'));
 }
 }
