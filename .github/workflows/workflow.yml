@@ -2,17 +2,6 @@ name: CI
 
 on: push
 jobs:
-  checks:
-    name: run
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-
-    - name: run
-      uses: ngalaiko/bazel-action/1.2.1@master
-      with:
-        args: build //...
-jobs:
   build:
     runs-on: ubuntu-latest
     
