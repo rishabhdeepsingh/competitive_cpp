@@ -5,7 +5,9 @@ bazel-competitive_cpp/
 bazel-out/
 bazel-testlogs/
 .clwb/.blaze/
-
+cmake-build-debug
+tags
+tags.*
 
 # Prerequisites
 *.d
