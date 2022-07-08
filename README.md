@@ -1,6 +1,5 @@
 # competitive_cpp
-![Testing](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
-
+![GitHub branch checks state](https://img.shields.io/github/checks-status/rishabhdeepsingh/competitive_cpp/main?style=for-the-badge) ![GitHub issues](https://img.shields.io/github/issues/rishabhdeepsingh/competitive_cpp?style=for-the-badge)
 
 Data structure and algorithms tested and usable using bazel
 
