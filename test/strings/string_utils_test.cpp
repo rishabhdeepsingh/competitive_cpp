@@ -27,6 +27,20 @@ TEST(StringUtilsTest, is_not_digit) {
   ASSERT_FALSE(StringUtils::is_digit('*'));
   ASSERT_FALSE(StringUtils::is_digit('?'));
 }
+
+TEST(StringUtilsTest, IsUpper) {
+  using namespace rishabhdeep::competitive;
+  ASSERT_TRUE(StringUtils::is_upper('A'));
+  ASSERT_TRUE(StringUtils::is_upper('R'));
+  ASSERT_TRUE(StringUtils::is_upper('Z'));
+}
+
+TEST(StringUtilsTest, IsNotUpper) {
+  using namespace rishabhdeep::competitive;
+  ASSERT_FALSE(StringUtils::is_upper('a'));
+  ASSERT_FALSE(StringUtils::is_upper('r'));
+  ASSERT_FALSE(StringUtils::is_upper('z'));
+}
 }
 }
 

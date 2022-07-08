@@ -11,6 +11,7 @@ namespace competitive {
 class StringUtils {
  public:
   static bool is_digit(char);
+  static bool is_upper(char);
 };
 
 }
