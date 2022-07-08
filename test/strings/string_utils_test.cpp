@@ -28,7 +28,7 @@ TEST(StringUtilsTest, is_not_digit) {
   ASSERT_FALSE(StringUtils::is_digit('?'));
 }
 
-TEST(StringUtilsTest, IsNotUpper) {
+TEST(StringUtilsTest, IsUpper) {
   using namespace rishabhdeep::competitive;
   ASSERT_FALSE(StringUtils::is_upper('A'));
   ASSERT_FALSE(StringUtils::is_upper('R'));
