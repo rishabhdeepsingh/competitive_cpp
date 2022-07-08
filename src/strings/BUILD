@@ -1,7 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
-    name = "competitive_cpp",
-    srcs = ["string_utils.cpp"],
+    name = "strings",
+    srcs = glob(["**/*.cpp"]),
+    hdrs = glob(["**/*.h"]),
     visibility = ["//visibility:public"],
 )
