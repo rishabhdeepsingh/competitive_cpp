@@ -1,4 +1,6 @@
 # competitive_cpp
+![Testing](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+
 
 Data structure and algorithms tested and usable using bazel
 
