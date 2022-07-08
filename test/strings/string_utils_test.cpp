@@ -30,9 +30,9 @@ TEST(StringUtilsTest, is_not_digit) {
 
 TEST(StringUtilsTest, IsUpper) {
   using namespace rishabhdeep::competitive;
-  ASSERT_FALSE(StringUtils::is_upper('A'));
-  ASSERT_FALSE(StringUtils::is_upper('R'));
-  ASSERT_FALSE(StringUtils::is_upper('Z'));
+  ASSERT_TRUE(StringUtils::is_upper('A'));
+  ASSERT_TRUE(StringUtils::is_upper('R'));
+  ASSERT_TRUE(StringUtils::is_upper('Z'));
 }
 
 TEST(StringUtilsTest, IsNotUpper) {
