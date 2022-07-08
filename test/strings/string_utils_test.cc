@@ -1,6 +1,6 @@
 #include "src/strings/string_utils.h"
 
-#include<include/gtest/gtest.h>
+#include<gtest/gtest.h>
 
 namespace rishabhdeep {
 namespace competitive_cpp {

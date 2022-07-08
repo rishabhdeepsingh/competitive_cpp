@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_test")
 
 cc_test(
     name = "string_utils_test",
-    srcs = ["string_utils_test.cpp"],
+    srcs = ["string_utils_test.cc"],
     deps = [
         "//src/strings",
         "@gtest",
