@@ -3,7 +3,7 @@
 //
 #include "src/geometry/point.h"
 
-#include<gtest/gtest.h>
+#include <gtest/gtest.h>
 
 namespace rishabhdeep {
 
@@ -88,5 +88,5 @@ TEST(Point, Multiply) {
   ASSERT_EQ(p.y, 4);
 }
 
-}
-}
+} // namespace competitive_cpp
+} // namespace rishabhdeep

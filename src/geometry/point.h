@@ -9,8 +9,7 @@ namespace rishabhdeep {
 
 namespace competitive_cpp {
 
-template <typename T>
-struct Point {
+template <typename T> struct Point {
   T x{}, y{};
 
   Point() = default;
@@ -24,8 +23,7 @@ struct Point {
   Point<T> &operator+=(Point<T>);
   Point<T> &operator-=(Point<T>);
 
-  template <typename U>
-  auto operator*(U o) -> Point<decltype(x + o)> {
+  template <typename U> auto operator*(U o) -> Point<decltype(x + o)> {
     return Point<decltype(x + o)>(this->x * o, this->y * o);
   }
 
@@ -39,36 +37,31 @@ struct Point {
   static const Point<T> TEN;
 };
 
-template <typename T>
-Point<T> Point<T>::operator+(Point<T> o) {
+template <typename T> Point<T> Point<T>::operator+(Point<T> o) {
   return Point<T>(this->x + o.x, this->y + o.y);
 }
 
-template <typename T>
-Point<T> &Point<T>::operator+=(const Point<T> o) {
+template <typename T> Point<T> &Point<T>::operator+=(const Point<T> o) {
   this->x += o.x;
   this->y += o.y;
   return *this;
 }
 
-template <typename T>
-Point<T> Point<T>::operator-(Point<T> o) {
+template <typename T> Point<T> Point<T>::operator-(Point<T> o) {
   return Point<T>(this->x - o.x, this->y - o.y);
 }
 
-template <typename T>
-Point<T> &Point<T>::operator-=(Point<T> o) {
+template <typename T> Point<T> &Point<T>::operator-=(Point<T> o) {
   this->x -= o.x;
   this->y -= o.y;
   return *this;
 }
 
-template <typename T, typename U>
-Point<T> operator*(U o, Point<T> p) {
+template <typename T, typename U> Point<T> operator*(U o, Point<T> p) {
   return p * o;
 }
 
-} // competitive_cpp
-} // rishabhdeep
+} // namespace competitive_cpp
+} // namespace rishabhdeep
 
-#endif //COMPETITIVE_CPP_SRC_GEOMETRY_POINT_H_
+#endif // COMPETITIVE_CPP_SRC_GEOMETRY_POINT_H_
