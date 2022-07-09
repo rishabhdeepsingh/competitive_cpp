@@ -37,22 +37,25 @@ struct Point {
   static const Point<T> ZERO;
   static const Point<T> ONE;
   static const Point<T> TEN;
-
 };
+
 template <typename T>
 Point<T> Point<T>::operator+(Point<T> o) {
   return Point<T>(this->x + o.x, this->y + o.y);
 }
+
 template <typename T>
 Point<T> &Point<T>::operator+=(const Point<T> o) {
   this->x += o.x;
   this->y += o.y;
   return *this;
 }
+
 template <typename T>
 Point<T> Point<T>::operator-(Point<T> o) {
   return Point<T>(this->x - o.x, this->y - o.y);
 }
+
 template <typename T>
 Point<T> &Point<T>::operator-=(Point<T> o) {
   this->x -= o.x;
