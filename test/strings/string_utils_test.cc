@@ -7,11 +7,9 @@ namespace competitive_cpp {
 class StringUtilsTest : public ::testing::Test {
  protected:
   void SetUp() override {
-
   }
 
   void TearDown() override {
-
   }
 };
 
