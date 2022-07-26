@@ -135,5 +135,38 @@ TEST(Point, MultiplyPointInplace) {
   ASSERT_EQ(q.y, 11);
 }
 
+TEST(Point, DivideScalarInplace) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(9, 12);
+  const int q = 3;
+  p /= q;
+  ASSERT_EQ(p.x, 3);
+  ASSERT_EQ(p.y, 4);
+}
+
+TEST(Point, DividePoint) {
+  using namespace rishabhdeep::competitive_cpp;
+  const Point<int> p(21, 44);
+  const Point<int> q(7, 11);
+  Point<int> r = p / q;
+  ASSERT_EQ(r.x, 3);
+  ASSERT_EQ(r.y, 4);
+  ASSERT_EQ(p.x, 21);
+  ASSERT_EQ(p.y, 44);
+  ASSERT_EQ(q.x, 7);
+  ASSERT_EQ(q.y, 11);
+}
+
+TEST(Point, DividePointInplace) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(21, 44);
+  const Point<int> q(7, 11);
+  p /= q;
+  ASSERT_EQ(p.x, 3);
+  ASSERT_EQ(p.y, 4);
+  ASSERT_EQ(q.x, 7);
+  ASSERT_EQ(q.y, 11);
+}
+
 } // namespace competitive_cpp
 } // namespace rishabhdeep

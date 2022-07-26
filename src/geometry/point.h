@@ -36,7 +36,7 @@ struct Point {
   }
 
   template <typename U>
-  auto operator*=(U o) -> Point<decltype(x + o)> {
+  auto operator*=(U o) -> Point<decltype(x * o)> {
     this->x *= o;
     this->y *= o;
     return *this;
@@ -46,7 +46,15 @@ struct Point {
   Point<T> operator*(Point<T>);
   Point<T> &operator*=(Point<T>);
   // Divide
+  Point<T> operator/(const Point<T>) const;
   Point<T> &operator/=(const Point<T>);
+  template <typename U>
+  auto operator/=(U o) -> Point<decltype(x / o)> {
+    this->x /= o;
+    this->y /= o;
+    return *this;
+  }
+
   // Modulo
   Point<T> &operator%=(const Point<T>);
   Point<T> &operator%=(T o);
@@ -88,6 +96,18 @@ template <typename T>
 Point<T> &Point<T>::operator*=(const Point<T> o) {
   this->x *= o.x;
   this->y *= o.y;
+  return *this;
+}
+
+template <typename T>
+Point<T> Point<T>::operator/(const Point<T> o) const {
+  return Point<T>{this->x / o.x, this->y / o.y};
+}
+
+template <typename T>
+Point<T> &Point<T>::operator/=(const Point<T> o) {
+  this->x /= o.x;
+  this->y /= o.y;
   return *this;
 }
 
