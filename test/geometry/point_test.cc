@@ -71,6 +71,16 @@ TEST(Point, SubtractEqual) {
   ASSERT_EQ(q.y, 2);
 }
 
+TEST(Point, NegativeOperator) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(3, 4);
+  Point<int> q = -p;
+  ASSERT_EQ(p.x, 3);
+  ASSERT_EQ(p.y, 4);
+  ASSERT_EQ(q.x, -3);
+  ASSERT_EQ(q.y, -4);
+}
+
 TEST(Point, MultiplyScalar) {
   using namespace rishabhdeep::competitive_cpp;
   Point<int> p(3, 4);

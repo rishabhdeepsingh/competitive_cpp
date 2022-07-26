@@ -25,6 +25,10 @@ struct Point {
   // Subtraction
   Point<T> operator-(Point<T>);
   Point<T> &operator-=(Point<T>);
+  // Negative operator
+  Point<T> operator-() {
+    return Point<T>(-this->x, -this->y);
+  }
 
   template <typename U>
   auto operator*(U o) -> Point<decltype(x + o)> {
@@ -37,7 +41,6 @@ struct Point {
     this->y *= o;
     return *this;
   }
-
 
   // Multiplication
   Point<T> operator*(Point<T>);
