@@ -18,17 +18,22 @@ template <typename T> struct Point {
   explicit Point(T _x) : x(_x) {}
   explicit Point(T _x, T _y) : x(_x), y{_y} {}
 
+  // Addition
   Point<T> operator+(Point<T>);
-  Point<T> operator-(Point<T>);
   Point<T> &operator+=(Point<T>);
+  // Subtraction
+  Point<T> operator-(Point<T>);
   Point<T> &operator-=(Point<T>);
 
   template <typename U> auto operator*(U o) -> Point<decltype(x + o)> {
     return Point<decltype(x + o)>(this->x * o, this->y * o);
   }
 
+  // Multiplication
   Point<T> &operator*=(const Point<T>);
+  // Divide
   Point<T> &operator/=(const Point<T>);
+  // Modulo
   Point<T> &operator%=(const Point<T>);
   Point<T> &operator%=(T o);
 
