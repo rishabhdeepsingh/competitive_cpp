@@ -30,6 +30,7 @@ template <typename T> struct Point {
   }
 
   // Multiplication
+  Point<T> operator*(const Point<T>);
   Point<T> &operator*=(const Point<T>);
   // Divide
   Point<T> &operator/=(const Point<T>);
@@ -54,6 +55,10 @@ template <typename T> Point<T> &Point<T>::operator+=(const Point<T> o) {
 
 template <typename T> Point<T> Point<T>::operator-(Point<T> o) {
   return Point<T>(this->x - o.x, this->y - o.y);
+}
+
+template <typename T> Point<T> Point<T>::operator*(Point<T> o) {
+  return Point<T>(this->x * o.x, this->y * o.y);
 }
 
 template <typename T> Point<T> &Point<T>::operator-=(Point<T> o) {

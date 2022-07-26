@@ -71,7 +71,7 @@ TEST(Point, SubtractEqual) {
   ASSERT_EQ(q.y, 2);
 }
 
-TEST(Point, Multiply) {
+TEST(Point, MultiplyScalar) {
   using namespace rishabhdeep::competitive_cpp;
   Point<int> p(3, 4);
   int q = 3;
@@ -84,6 +84,23 @@ TEST(Point, Multiply) {
   r = q * p;
   ASSERT_EQ(r.x, 9);
   ASSERT_EQ(r.y, 12);
+  ASSERT_EQ(p.x, 3);
+  ASSERT_EQ(p.y, 4);
+}
+
+TEST(Point, MultiplyPoint) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(3, 4);
+  Point<int> q(7, 11);
+  Point<int> r = p * q;
+  ASSERT_EQ(r.x, 21);
+  ASSERT_EQ(r.y, 44);
+  ASSERT_EQ(p.x, 3);
+  ASSERT_EQ(p.y, 4);
+  // commutative property
+  r = q * p;
+  ASSERT_EQ(r.x, 21);
+  ASSERT_EQ(r.y, 44);
   ASSERT_EQ(p.x, 3);
   ASSERT_EQ(p.y, 4);
 }
