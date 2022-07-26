@@ -88,6 +88,15 @@ TEST(Point, MultiplyScalar) {
   ASSERT_EQ(p.y, 4);
 }
 
+TEST(Point, MultiplyScalarInplace) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(3, 4);
+  const int q = 3;
+  p *= q;
+  ASSERT_EQ(p.x, 9);
+  ASSERT_EQ(p.y, 12);
+}
+
 TEST(Point, MultiplyPoint) {
   using namespace rishabhdeep::competitive_cpp;
   Point<int> p(3, 4);
@@ -103,6 +112,17 @@ TEST(Point, MultiplyPoint) {
   ASSERT_EQ(r.y, 44);
   ASSERT_EQ(p.x, 3);
   ASSERT_EQ(p.y, 4);
+}
+
+TEST(Point, MultiplyPointInplace) {
+  using namespace rishabhdeep::competitive_cpp;
+  Point<int> p(3, 4);
+  Point<int> q(7, 11);
+  p *= q;
+  ASSERT_EQ(p.x, 21);
+  ASSERT_EQ(p.y, 44);
+  ASSERT_EQ(q.x, 7);
+  ASSERT_EQ(q.y, 11);
 }
 
 } // namespace competitive_cpp
