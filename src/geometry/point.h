@@ -72,7 +72,6 @@ struct Point {
   bool operator!=(const Point &rhs) const {
     return !(this->x == rhs.x and this->y == rhs.y);
   }
-
 };
 
 // Addition
